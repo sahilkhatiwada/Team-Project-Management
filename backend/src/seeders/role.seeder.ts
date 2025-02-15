@@ -4,7 +4,16 @@ import connectDatabase from "../config/database.config";
 import RoleModel from "../models/roles-permission.model";
 import { RolePermissions } from "../utils/role-permission";
 
-const seedRoles = async () => {
+/**
+ * Seeds the roles collection with the default roles and their permissions.
+ *
+ * NOTE: This function will delete all existing roles before seeding the new ones.
+ *
+ * @function seedRoles
+ * @async
+ * @returns {Promise<void>}
+ */
+const seedRoles = async (): Promise<void> => {
   console.log("Seeding roles started...");
 
   try {

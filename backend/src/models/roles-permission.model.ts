@@ -24,6 +24,11 @@ const roleSchema = new Schema<RoleDocument>(
       type: [String],
       enum: Object.values(Permissions),
       required: true,
+    /**
+     * The default value of the permissions field is determined by the role name.
+     * The default value is taken from the RolePermissions object.
+     * The key of the object is the role name and the value is an array of permissions.
+     */
       default: function (this: RoleDocument) {
         return RolePermissions[this.name];
       },

@@ -45,6 +45,7 @@ SERVICE_UNAVAILABLE: 503,
 GATEWAY_TIMEOUT: 504,
 
 });
-export const httpConfigure = httpConfig();
 
-export type httpStatusCodeType =(typeof httpConfigure)[keyof typeof httpConfigure];
+export const HTTPSTATUs = httpConfig();
+
+export type HttpStatusCodeType = (typeof HTTPSTATUs)[keyof typeof HTTPSTATUs];
