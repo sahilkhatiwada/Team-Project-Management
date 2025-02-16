@@ -3,6 +3,6 @@ import { getCurrentUserController } from "../controllers/user.controller";
 
 const userRoutes = Router();
 
-userRoutes.get("/current", getCurrentUserController);
+userRoutes.get("/loggedInUser", getCurrentUserController);
 
 export default userRoutes;

@@ -18,7 +18,8 @@ export interface UserDocument extends Document {
 
 
 const userSchema = new Schema<UserDocument>({
-    name: { type: String, required: true ,
+    name: { type: String,
+       required: true ,
         trim: true,
     },
     email: { 
@@ -26,7 +27,8 @@ const userSchema = new Schema<UserDocument>({
          required: true, 
          unique: true
          },
-    password: { type: String, select: true },
+    password: { type: String, 
+      select: true },
     profileImage:{
         type: String,
         default: null
