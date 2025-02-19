@@ -24,6 +24,12 @@ export class AppError extends Error {
 }
 
 export class HttpException extends AppError {
+  /**
+   * Creates an instance of HttpException
+   * @param message - The error message, defaults to "Http Exception Error"
+   * @param statusCode - The HTTP status code of the error
+   * @param errorCode - The error code, defaults to INTERNAL_SERVER_ERROR
+   */
   constructor(
     message = "Http Exception Error",
     statusCode: HttpStatusCodeType,
